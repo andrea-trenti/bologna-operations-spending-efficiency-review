@@ -1,84 +1,73 @@
 # Bologna Operations and Spending Efficiency Review
 
-An independent, GitHub-first analytical project on the **Comune di Bologna** focused on public finance, urban demand, procurement, forecasting, and optimization for roads, mobility, and urban maintenance.
+This repository contains a structured analysis of the **Comune di Bologna** focused on public finance, urban demand, procurement, forecasting, and intervention design for roads, mobility, and urban maintenance.
 
-This repository was built as a **serious personal project** for intellectual interest, portfolio use, and structured public-sector analysis. The goal is not to publish raw data indiscriminately, but to provide a clean, professional repository containing:
+The project was developed as an independent research effort driven by interest in Bologna as a city and in the mechanics of municipal decision-making. The objective is not to publish raw municipal files indiscriminately, but to present a coherent analytical body of work built on official documents and open data, together with the code needed to reconstruct the main steps locally.
 
-- one coherent analytical narrative;
-- six GitHub-ready Markdown papers;
-- Python scripts corresponding to the main analytical steps;
-- a full source catalog with official links and download instructions;
-- publication and attribution notes for a public GitHub setup.
+## What is in the repository
 
-The repository is intentionally configured for **public GitHub publication**:
-- no municipal raw files are bundled in the repository;
-- official source links are documented in detail;
-- scripts assume local downloads placed in `data/raw/`;
-- documentation explains exactly what was used, why it was used, and how to reproduce the work.
+- six Markdown papers forming one continuous analytical sequence;
+- five Python scripts reproducing the main quantitative steps;
+- a source guide with official links and download instructions;
+- a reproducibility note explaining how to rebuild the local workflow;
+- publication and attribution notes for a clean public repository.
 
 ## Repository structure
 
-- `papers/` — six main Markdown papers: introduction + Parts 1–5.
-- `scripts/` — Python scripts mirroring the main analytical workflow.
-- `docs/` — source catalog, legal/publication notes, repository setup, file audit, and manifest.
+- `papers/` — main analytical texts.
+- `scripts/` — Python scripts corresponding to the main analytical workflow.
+- `docs/` — source guide, input audit, reproducibility note, publication note, and project structure.
 - `requirements.txt` — Python dependencies.
 - `.gitignore` — excludes local data downloads and cache files.
 
 ## Papers
 
-- `papers/bologna-context-and-motivation.md` — civic context, project motivation, and why Bologna is the right analytical case.
-- `papers/municipal-fiscal-architecture-cash-conversion.md` — Part 1: fiscal architecture, allocability, and budget-to-cash conversion.
-- `papers/urban-demand-pressure-model.md` — Part 2: territorial demand, backlog risk, mobility stress, and spatial prioritisation.
-- `papers/procurement-efficiency-capex-absorption.md` — Part 3: procurement structure, capital absorption, and intervention-performance review.
-- `papers/causal-and-predictive-engine.md` — Part 4: dynamic panel modelling, forecasting, and fiscally admissible scenario design.
-- `papers/budget-allocation-optimization-stack.md` — Part 5: mixed-integer budget allocation and intervention sequencing under legal and operational constraints.
+- `papers/bologna-context-and-motivation.md` — Bologna as the civic and analytical setting of the project.
+- `papers/municipal-fiscal-architecture-cash-conversion.md` — fiscal architecture, allocability, and budget-to-cash conversion.
+- `papers/urban-demand-pressure-model.md` — territorial demand, backlog risk, mobility stress, and spatial prioritisation.
+- `papers/procurement-efficiency-capex-absorption.md` — procurement structure, capital absorption, and intervention-performance review.
+- `papers/causal-and-predictive-engine.md` — dynamic panel modelling, forecasting, and fiscally admissible scenario design.
+- `papers/budget-allocation-optimization-stack.md` — mixed-integer budget allocation and intervention sequencing under legal and operational constraints.
 
-## Python workflow
+## Scripts
 
-- `scripts/part1_fiscal_architecture.py` — execution and conversion metrics from annual-account data.
-- `scripts/part2_urban_pressure.py` — pressure-scoring logic from tickets, incidents, and current works.
-- `scripts/part3_procurement_capex.py` — procurement filtering and throughput summary for the mobility-maintenance perimeter.
-- `scripts/part4_predictive_engine.py` — demand-panel preparation and negative-binomial modelling scaffold.
-- `scripts/part5_optimization_stack.py` — portfolio optimization scaffold with budget floors, activation caps, and territorial coverage constraints.
+- `scripts/fiscal_architecture.py` — execution and conversion metrics from annual-account data.
+- `scripts/urban_pressure.py` — quartiere-level pressure scoring from complaints, incidents, and current works.
+- `scripts/procurement_capex.py` — procurement filtering and throughput summary for the mobility-maintenance perimeter.
+- `scripts/predictive_engine.py` — demand-panel preparation and negative-binomial modelling scaffold.
+- `scripts/optimization_stack.py` — portfolio optimisation scaffold with budget floors, activation caps, and territorial coverage constraints.
 
-## Data policy
+## Sources and replication
 
-This public GitHub version is **source-linked rather than data-bundled**.
+No raw municipal files are included in this repository. Official sources, expected filenames, and download links are documented in `docs/data-sources.md`.  
+To reproduce the analysis locally:
 
-To reproduce the analysis:
-1. download the official Bologna files listed in `docs/source-catalog-and-download-guide.md`;
+1. download the files listed in `docs/data-sources.md`;
 2. place them in `data/raw/` using the original filenames;
-3. run the Python scripts locally.
+3. install the dependencies in `requirements.txt`;
+4. run the scripts from the repository root.
 
-This keeps the repository cleaner, lighter, and more prudent from a publication perspective while preserving full reproducibility.
-
-## Suggested GitHub repository name
+## Recommended repository name
 
 `bologna-operations-spending-efficiency-review`
 
-## Suggested GitHub description
+## Suggested description
 
-Consulting-style analytical repository on Bologna’s public finance, urban demand, procurement, forecasting, and optimization for roads, mobility, and urban maintenance.
-
-## Suggested GitHub topics
-
-`bologna`, `public-finance`, `procurement`, `urban-analytics`, `forecasting`, `optimization`, `public-sector`, `municipal-data`, `italy`, `consulting`
+Consulting-style analytical repository on Bologna’s public finance, urban demand, procurement, forecasting, and optimisation for roads, mobility, and urban maintenance.
 
 ## Main documentation files
 
-- `docs/source-catalog-and-download-guide.md` — official URLs, what each source contains, what it is used for, and how to download it.
-- `docs/input-usage-audit.md` — exact audit of the Bologna input files used in the analytical work.
-- `docs/publication-and-legal-notes.md` — practical GitHub publication note and attribution logic.
-- `docs/repository-setup.md` — repository naming, positioning, and upload guidance.
-- `docs/repository-manifest.md` — full file inventory of this GitHub-ready package.
+- `docs/data-sources.md` — official URLs, what each source contains, and what it is used for.
+- `docs/input-audit.md` — exact audit of the Bologna files used in the project.
+- `docs/reproducibility.md` — local setup and execution notes.
+- `docs/publication-notes.md` — publication and attribution note.
+- `docs/project-structure.md` — full repository tree and file descriptions.
 
 ## Copyright and reuse
 
 The analytical text, synthesis, structure of indicators, and interpretive framework in this repository are original work. The repository does not grant any general open licence for full-text reuse. Reasonable excerpts may be quoted for research, teaching, academic discussion, or internal analytical use with clear attribution. Substantial reuse, adaptation, republication, or commercial use should credit the author and, where possible, request permission. Nothing in this repository constitutes legal advice.
 
-4. Copyright and reuse
-
-© 2025 Andrea Trenti. All rights reserved.
+© 2026 Andrea Trenti. All rights reserved.
 • The analytical texts, tables and structure of the indicators are original works protected by copyright.
 • The underlying statistical data remain the property of their respective institutions (World Bank, IMF, industry associations, etc.) and are used exclusively for analytical and educational purposes.
 • No open-source or Creative Commons licence is granted for the full reuse of the texts; any substantial reuse requires the author’s permission.
